@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(120deg, #eef2f3 0%, #ffffff 100%);
+  font-family: 'Inter', sans-serif;
+}
