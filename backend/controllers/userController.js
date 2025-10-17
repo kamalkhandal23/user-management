@@ -1,6 +1,6 @@
 import { db } from "../db.js";
 
-// 🧩 1️⃣ Get all users (with followers & following count)
+
 export const getUsers = async (req, res) => {
   try {
     const users = await db.all(`
@@ -16,7 +16,7 @@ export const getUsers = async (req, res) => {
   }
 };
 
-// 🧩 2️⃣ Create a new user
+
 export const createUser = async (req, res) => {
   const { name, email, phone, dob, image_url } = req.body;
   try {
@@ -30,7 +30,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-// 🧩 3️⃣ Update user
+
 export const updateUser = async (req, res) => {
   const { id } = req.params;
   const { name, email, phone, dob, image_url } = req.body;
@@ -46,7 +46,7 @@ export const updateUser = async (req, res) => {
   }
 };
 
-// 🧩 4️⃣ Delete user
+
 export const deleteUser = async (req, res) => {
   const { id } = req.params;
   try {
@@ -57,7 +57,7 @@ export const deleteUser = async (req, res) => {
   }
 };
 
-// 🧩 5️⃣ Follow / Unfollow user
+
 export const followUser = async (req, res) => {
   const { follower_id, following_id } = req.body;
 
